@@ -3,6 +3,6 @@ angular.module('phoneList')
     .component('phoneList', {  // This name is what AngularJS uses to match to the `<phone-list>` element.
      // Note: The URL is relative to our `index.html` file
     templateUrl:'templates/phone-list/phoneList.template.html',
-    controller: 'PhoneController'
+    controller: 'PhoneListController'
     })
 ;
