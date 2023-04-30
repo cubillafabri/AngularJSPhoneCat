@@ -13,7 +13,7 @@
     <script src="/node_modules/angular-route/angular-route.js"></script>
     
   </head>
-  <body ng-controller="PhoneController">
+  <body ng-controller="PhoneController" class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="#/">Phones App</a>
@@ -24,11 +24,12 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-                    <select id="inputState" class="form-select me-3">
-                    <option selected>Newest</option>
-                    <option>Alphabetical</option>
+                    <select id="inputState" class="form-select me-3" ng-model="orderProp">
+                    <option value="name">Alphabetical</option>
+                    <option value="age">Newest</option>
+                    <option value="-age">Oldest</option>
                     </select>
-              <input ng-model="query" class="form-control me-3" type="search" placeholder="{{data.buscar}}" aria-label="Search">
+              <input ng-model="query" class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>

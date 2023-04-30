@@ -1,18 +1,12 @@
 'use strict'
 // Define the `phoneList` module for controllers
 angular.module('phoneList')
-    .controller('PhoneController', function($scope){
-        $scope.phones = [
-            {
-              name: 'Nexus S',
-              snippet: 'Fast just got faster with Nexus S.'
-            }, {
-              name: 'Motorola XOOM™ with Wi-Fi',
-              snippet: 'The Next, Next Generation tablet.'
-            }, {
-              name: 'MOTOROLA XOOM™',
-              snippet: 'The Next, Next Generation tablet.'
-            }
-          ];
-    })
+    .controller('PhoneController',['$scope', '$http' ,function(se, hp){
+      se.orderProp = 'age';
+        se.phones = [];
+          hp.get('phones/phones.json').then(function(response) {
+            console.log(response.data);
+            se.phones = response.data;
+          });
+    }])
 ;
