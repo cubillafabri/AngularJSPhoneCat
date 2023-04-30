@@ -1,6 +1,7 @@
 'use strict'
 // Define the `phonecatApp` module
-angular.module('phoneApp', ['phoneList']);/*
+angular.module('phoneApp', ['phoneList']);/*  // ...which depends on the `phoneList` module
+
 .config(['$locationProvider', function(locRo) {
     locRo.hashPrefix('');
 }])
