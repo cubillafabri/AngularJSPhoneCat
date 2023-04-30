@@ -26,13 +26,12 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-                    <select id="inputState" class="form-select me-3" ng-model="orderProp">
-                    <option value="name">Alphabetical</option>
-                    <option value="age">Newest</option>
-                    <option value="-age">Oldest</option>
-                    </select>
               <input ng-model="query" class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <select id="inputState" class="form-select me-3" ng-model="orderProp">
+              <option value="name">Alphabetical</option>
+              <option value="age">Newest</option>
+              <option value="-age">Oldest</option>
+              </select>
             </form>
           </div>
         </div>
