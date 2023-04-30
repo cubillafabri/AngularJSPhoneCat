@@ -1,18 +1,52 @@
 <!doctype html>
-<html ng-app="">
+<html ng-app="phoneApp">
   <head>
     <meta charset="utf-8">
     <title>Phone Gallery - AngularJS</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
-    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-animate/angular-animate.js"></script>
     <script src="/node_modules/angular-resource/angular-resource.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
-
+    
   </head>
-  <body>
-
+  <body ng-controller="PhoneController">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#/">Phones App</a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#/404">Home</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                    <select id="inputState" class="form-select me-3">
+                    <option selected>Newest</option>
+                    <option>Alphabetical</option>
+                    </select>
+              <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+  <!--
+      <div class="container my-5" ng-view>
+        
+      </div>
+-->
+<div class="container my-5">
+  <phone-list ></phone-list>
+</div>
+    <!--Note that files defining a module (i.e. .module.js) need to be included before other files that add features-->
+    <script src="js/app.module.js"></script>
+    <!-- Modulo para phone list -->
+    <script src="js/phone-list/phone-list.module.js"></script>
+    <script src="js/phone-list/controllers/PhoneController.js"></script>
+    <script src="js/phone-list/components/appComponents.js"></script>
   </body>
 </html>
