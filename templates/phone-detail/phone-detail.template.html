@@ -78,6 +78,12 @@
                     <dt>Connectivity </dt>
                     <dd ng-repeat="connectivity in phone.connectivity">{{connectivity}}</dd>
                   </dl>
+                  <dl>
+                    <dt>Infrared</dt>
+                    <dd>{{phone.connectivity.infrared | checkmark}}</dd>
+                    <dt>GPS</dt>
+                    <dd>{{phone.connectivity.gps | checkmark}}</dd>
+                  </dl>
                 </div>
               </div>
             </div>
