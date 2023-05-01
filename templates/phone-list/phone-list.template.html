@@ -1,7 +1,7 @@
-<div class="my-3 p-3 bg-body rounded shadow-sm" >
+<div class="my-3 p-3 bg-body rounded shadow-sm">
     <h6 class="border-bottom pb-2 mb-0">Phones List</h6>
-    <div class="d-flex text-body-secondary pt-3" ng-repeat="phone in phones | filter:$parent.query | orderBy:$parent.orderProp">
-      <a ng-href="#/phones/{{phone.id}}">
+    <div class="d-flex text-body-secondary pt-3 phone-list-item" ng-repeat="phone in phones | filter:$parent.query | orderBy:$parent.orderProp">
+      <a ng-href="#/phones/{{phone.id}}" class="thumb">
         <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" class="bd-placeholder-img flex-shrink-0 me-4 rounded" width="90" height="90"/>
       </a>
       <p class="pb-3 mb-0 medium lh-sm border-bottom">

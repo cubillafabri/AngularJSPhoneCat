@@ -6,6 +6,8 @@
     <link rel = "icon" type = "image/png" href = "./favicon.png" >
     <title>PhonesApp Gallery - AngularJS</title>
     <link rel="stylesheet" href="/css/app.css">
+    <!-- Defines CSS necessary for animations -->
+    <link rel="stylesheet" href="/css/app.animations.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -40,9 +42,12 @@
           </div>
         </div>
       </nav>
-  
-      <div class="container my-5" ng-view>
+
+      <div class="view-container">
+        <div class="container my-5 view-frame" ng-view>
+        </div>
       </div>
+      
       
     <!--Note that files defining a module (i.e. .module.js) need to be included before other files that add features-->
     <script src="js/app.module.js"></script>
@@ -58,5 +63,7 @@
     <script src="js/core/checkmark/checkmark.filter.js"></script>
     <script src="js/core/phone/phone.module.js"></script>
     <script src="js/core/phone/phone.service.js"></script>
+    <!-- Defines JavaScript animations -->
+    <script src="app.animations.js"></script>
   </body>
 </html>
