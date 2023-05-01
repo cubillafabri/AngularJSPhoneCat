@@ -19,7 +19,10 @@
   <body ng-controller="PhoneListController" class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand">PhonesApp</a>
+          <a class="navbar-brand"  ng-href="#/phones">
+            <img src="./favicon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"/>
+            PhonesApp
+          </a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -40,7 +43,7 @@
   
       <div class="container my-5" ng-view>
       </div>
-
+      
     <!--Note that files defining a module (i.e. .module.js) need to be included before other files that add features-->
     <script src="js/app.module.js"></script>
     <script src="js/app.config.js"></script>
