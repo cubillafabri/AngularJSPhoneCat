@@ -7,6 +7,7 @@ angular.module('phoneList')
           hp.get('phones/phones.json').then(function(response) {
             console.log(response.data);
             se.phones = response.data;
+            //se.phones = response.data.slice(0, 2);
           });
     }])
 ;

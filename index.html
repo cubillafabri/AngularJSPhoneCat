@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel = "icon" type = "image/png" href = "./favicon.png" >
     <title>Phone Gallery - AngularJS</title>
+    <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -18,11 +19,11 @@
   <body ng-controller="PhoneListController" class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="#/">Phones App</a>
+          <a class="navbar-brand">PhonesApp</a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="#/404">Home</a>
+                <a class="nav-link active" ng-href="#/phones">Home</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -36,19 +37,19 @@
           </div>
         </div>
       </nav>
-  <!--
+  
       <div class="container my-5" ng-view>
-        
       </div>
--->
-<div class="container my-5">
-  <phone-list ></phone-list>
-</div>
+
     <!--Note that files defining a module (i.e. .module.js) need to be included before other files that add features-->
     <script src="js/app.module.js"></script>
+    <script src="js/app.config.js"></script>
     <!-- Modulo para phone list -->
     <script src="js/phone-list/phone-list.module.js"></script>
     <script src="js/phone-list/controllers/phone-list.controller.js"></script>
     <script src="js/phone-list/components/phone-list.component.js"></script>
+    <script src="js/phone-detail/phone-detail.module.js"></script>
+    <script src="js/phone-detail/components/phone-detail.component.js"></script>
+    <script src="js/phone-detail/controllers/phone-detail.controller.js"></script>
   </body>
 </html>
